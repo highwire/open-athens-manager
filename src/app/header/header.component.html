@@ -1,0 +1,37 @@
+<nav class="custom-nav navbar navbar-expand-md navbar-light bg-white header-shadow bg-light py-0">
+    <div class="container">
+        <a class="navbar-brand d-flex" routerLink="/">
+            <img src="../../assets/img/logo.svg" height="57" alt="image">
+
+            <div class="nav-text">
+                <img class="nav-logotype" src="../../assets/img/logotype.svg" alt="HighWire">
+
+                <div class="nav-product-name">Open Athens Manager</div>
+                <div class="nav-publisher ng-binding ng-hide" ng-show="authz.publisherName"></div>
+            </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="display">
+            <ul class="navbar-nav ms-auto  mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             HighWire Press
+             </a>
+                    <ul class="dropdown-menu dropdown-menu-end rounded-0 mb-2" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="/subscriber-info">Subscriber Info</a></li>
+                        <li><a class="dropdown-item" routerLink="/subscriber">Look up</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" routerLink="login/logout" (click)="hideNav()">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
